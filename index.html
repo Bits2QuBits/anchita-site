@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anchita — Institutional Banking, Orchestrated</title>
+  <meta name="description" content="Anchita is a platform for the institutional banking client lifecycle — onboarding, servicing, and payments, orchestrated end to end. A product of Anchita LLC.">
+  <link rel="canonical" href="https://anchita.ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anchita.ai/">
+  <meta property="og:title" content="Anchita — Institutional Banking, Orchestrated">
+  <meta property="og:description" content="A platform for the institutional banking client lifecycle — onboarding, servicing, and payments, orchestrated end to end.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1017">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230b1017'/%3E%3Ctext%20x='32'%20y='47'%20font-family='Georgia,serif'%20font-size='44'%20fill='%23c7a25a'%20text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --ink:#0b1017; --ink-deep:#06090d;
+      --text:#eceff3; --muted:#8b98a8; --faint:#5c6773;
+      --gold:#c7a25a; --gold-soft:rgba(199,162,90,.5);
+      --hair:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--ink); color:var(--text);
+      font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      min-height:100svh; overflow-x:hidden;
+    }
+    #flow{position:fixed; inset:0; width:100%; height:100%; z-index:0; display:block;}
+    .veil{position:fixed; inset:0; z-index:1; pointer-events:none;
+      background:
+        radial-gradient(115% 88% at 50% 44%, transparent 0%, transparent 40%, rgba(6,9,13,.55) 100%),
+        linear-gradient(to bottom, rgba(6,9,13,.55) 0%, transparent 20%, transparent 68%, rgba(6,9,13,.88) 100%);
+    }
+    .page{position:relative; z-index:2; min-height:100svh; display:flex; flex-direction:column;}
+    .stage{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:72px 24px 44px;}
+    .eyebrow{font-size:12px; letter-spacing:.36em; text-transform:uppercase; color:var(--faint);
+      margin:0 0 32px; font-weight:500;}
+    .wordmark{font-family:"Fraunces",Georgia,serif; font-weight:360; font-optical-sizing:auto;
+      font-size:clamp(58px,14vw,138px); line-height:.9; letter-spacing:-.012em; margin:0; color:var(--text);}
+    .wordmark .tm{font-family:"IBM Plex Sans",sans-serif; font-size:.15em; vertical-align:super;
+      letter-spacing:0; color:var(--gold); font-weight:400; margin-left:.05em;}
+    .rule{width:52px; height:1px; background:var(--gold); opacity:.85; margin:32px 0 28px;}
+    .tagline{font-family:"Fraunces",Georgia,serif; font-style:italic; font-weight:340;
+      font-size:clamp(19px,3.1vw,28px); line-height:1.25; color:#dfe4ea; margin:0; text-wrap:balance;}
+    .lede{max-width:54ch; font-size:clamp(14.5px,1.6vw,16.5px); line-height:1.66; color:var(--muted);
+      margin:26px 0 0; text-wrap:pretty;}
+    .status{display:inline-flex; align-items:center; gap:9px; margin-top:36px;
+      font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+      border:1px solid var(--hair); border-radius:999px; padding:9px 16px 9px 14px;
+      background:rgba(255,255,255,.02);}
+    .status .dot{width:6px; height:6px; border-radius:50%; background:var(--gold);
+      box-shadow:0 0 0 0 var(--gold-soft); animation:pulse 2.8s ease-out infinite;}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(199,162,90,.5)}
+      70%{box-shadow:0 0 0 9px rgba(199,162,90,0)}
+      100%{box-shadow:0 0 0 0 rgba(199,162,90,0)}
+    }
+    .legal{padding:22px 24px 30px; text-align:center; border-top:1px solid var(--hair);
+      display:flex; flex-direction:column; gap:5px;
+      background:linear-gradient(to bottom, transparent, rgba(6,9,13,.55));}
+    .legal p{margin:0; font-size:11.5px; letter-spacing:.04em; color:var(--faint); line-height:1.55;}
+    .legal .mark{color:var(--muted);}
+    @media (prefers-reduced-motion:reduce){ .status .dot{animation:none} }
+    @media (max-width:520px){ .eyebrow{margin-bottom:24px; letter-spacing:.3em} }
+  </style>
+</head>
+<body>
+  <canvas id="flow" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+
+  <div class="page">
+    <main class="stage">
+      <p class="eyebrow">Est. 2026 &middot; Missouri, USA</p>
+      <h1 class="wordmark">Anchita<span class="tm">&trade;</span></h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="tagline">Institutional Banking, Orchestrated</p>
+      <p class="lede">A platform for the institutional banking client lifecycle &mdash; onboarding, servicing, and payments, orchestrated end to end.</p>
+      <div class="status"><span class="dot" aria-hidden="true"></span> In active development</div>
+    </main>
+    <footer class="legal">
+      <p class="mark">ANCHITA&trade; is a trademark of Anchita LLC &middot; U.S. trademark application pending</p>
+      <p>&copy; 2026 Anchita LLC &middot; All rights reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const cv = document.getElementById('flow');
+      const ctx = cv.getContext('2d');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const INK = '#0b1017';
+      let W, H, DPR, parts = [], t = 0, raf = 0;
+
+      function newPart(){
+        return { x: Math.random()*W, y: Math.random()*H, life: 0,
+          max: 140 + Math.random()*220,
+          tone: Math.random() < 0.62 ? 'g' : 's',
+          w: (0.5 + Math.random()*0.7) * DPR };
+      }
+      function initParts(){
+        const n = Math.round((innerWidth*innerHeight)/16000);
+        parts = [];
+        const count = Math.min(Math.max(n, 60), 200);
+        for(let i=0;i<count;i++) parts.push(newPart());
+      }
+      function resize(){
+        DPR = Math.min(window.devicePixelRatio||1, 2);
+        W = cv.width = Math.floor(innerWidth*DPR);
+        H = cv.height = Math.floor(innerHeight*DPR);
+        cv.style.width = innerWidth+'px';
+        cv.style.height = innerHeight+'px';
+        ctx.fillStyle = INK; ctx.fillRect(0,0,W,H);
+        initParts();
+      }
+      function field(x,y,tt){
+        const s = 0.0012;
+        return Math.sin(x*s + tt)*1.1
+             + Math.cos(y*s*1.15 - tt*0.6)*0.9
+             + Math.sin((x+y)*s*0.6 + tt*0.4)*0.7;
+      }
+      function step(){
+        ctx.fillStyle = 'rgba(11,16,23,0.055)';
+        ctx.fillRect(0,0,W,H);
+        t += 0.0016;
+        for(const p of parts){
+          const a = field(p.x, p.y, t) * Math.PI;
+          const nx = p.x + Math.cos(a)*1.1*DPR;
+          const ny = p.y + Math.sin(a)*1.1*DPR;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny);
+          ctx.lineWidth = p.w;
+          ctx.strokeStyle = p.tone === 'g'
+            ? 'rgba(199,162,90,0.16)' : 'rgba(90,140,175,0.12)';
+          ctx.stroke();
+          p.x = nx; p.y = ny; p.life++;
+          if(p.life > p.max || p.x < 0 || p.x > W || p.y < 0 || p.y > H) Object.assign(p, newPart());
+        }
+      }
+      function warm(frames){ for(let i=0;i<frames;i++) step(); }
+      function loop(){ step(); raf = requestAnimationFrame(loop); }
+
+      resize();
+      if(reduce){ warm(420); }
+      else { warm(160); loop(); }
+      window.addEventListener('resize', function(){
+        cancelAnimationFrame(raf); resize();
+        if(!reduce){ warm(120); loop(); }
+      });
+    })();
+  </script>
+</body>
+</html>
